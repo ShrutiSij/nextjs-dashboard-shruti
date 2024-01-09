@@ -13,10 +13,15 @@ import clsx from 'clsx';
  
 export default function NavLinks() {
   const pathname = usePathname();
- 
+  const links = [
+    {
+        icon: '',
+        href: '/projects',
+        name: 'Projects'
+    }]
   return (
     <>
-      {links.map((link) => {
+      { links.map((link) => {
         const LinkIcon = link.icon;
         return (
           <Link
@@ -29,7 +34,7 @@ export default function NavLinks() {
               },
             )}
           >
-            <LinkIcon className="w-6" />
+            <LinkIcon />
             <p className="hidden md:block">{link.name}</p>
           </Link>
         );
