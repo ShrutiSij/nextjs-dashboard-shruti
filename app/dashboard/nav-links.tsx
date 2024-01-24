@@ -10,15 +10,15 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
  
 // ...
- 
+const links = [
+  {
+      icon: 'Invoices',
+      href: '/dashboard/invoices',
+      name: 'Projects'
+  }]
 export default function NavLinks() {
   const pathname = usePathname();
-  const links = [
-    {
-        icon: '',
-        href: '/projects',
-        name: 'Projects'
-    }]
+  
   return (
     <>
       { links.map((link) => {
